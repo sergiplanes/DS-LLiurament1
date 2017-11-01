@@ -1,0 +1,75 @@
+@startuml
+class totSeries{
+}
+class Cataleg{
+
+}
+class Usuaris{
+}
+
+class UsuariRegistrat{
+  String nomUsuari
+  String password
+  String nacionalitat
+  Date dataNeixament
+  boolean visualitzant
+}
+
+class Series{
+  String titol
+  String descripcio
+  Artistes artistes
+  String productora
+}
+
+class Temporades{
+  int num
+}
+
+class Episodis{
+  String nomEpisodi
+  int numEpisodi
+  int duracio
+  String idiomaOriginal
+  String descripcio
+  Date dataPrimeraEmisio
+}
+
+class Artistes{
+  String nomArtista
+  String nacionalitat
+}
+
+class Directors{
+
+}
+
+class Actors{
+
+}
+
+class Productores{
+  int identificador
+  String nom
+  Date dataCreacio
+}
+
+
+
+
+
+totSeries  " 1  " o-- " * "  Usuaris : Conté
+Usuaris <|-- UsuariRegistrat
+Usuaris -- Cataleg : Visualitzar
+UsuariRegistrat -- Episodis : Visualitzar
+UsuariRegistrat -- Episodis : Valorar
+totSeries  " 1 " *-- " * "  Cataleg : Conté
+Cataleg " 1 " o-- " * " Series: Conté
+Series " 1 " *-- " * " Temporades: Conté
+Series " 1 " o-- " 1   " Productores: ^ \n Produeixen
+Temporades " 1 " *-- " * " Episodis: Conté
+Series " 1 " *-- " * " Artistes: Actuan
+Artistes <|-- Directors
+Artistes <|-- Actors
+
+@enduml
