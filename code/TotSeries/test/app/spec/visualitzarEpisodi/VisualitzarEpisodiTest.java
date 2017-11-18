@@ -8,25 +8,20 @@ package app.spec.visualitzarEpisodi;
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 import app.VisualitzarEpisodi;
-import java.util.ArrayList;
 
 /**
  *
  * @author sergiplanes
  */
-
 @RunWith(ConcordionRunner.class)
 public class VisualitzarEpisodiTest {
 
-    public class EpisodiValidation {
+    public boolean isValidTest() {
 
-        public boolean isValidTest(ArrayList <String> serie) {
-            
-            VisualitzarEpisodi view = new VisualitzarEpisodi();
+        VisualitzarEpisodi view = new VisualitzarEpisodi();
 
-            return view.validateEpisodi(serie);
+        return view.validateEpisodi();
 
-        }
     }
-    
+
 }

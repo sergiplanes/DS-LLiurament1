@@ -13,13 +13,14 @@
         <p>
 
             Es dona funcionalitat per detectar si la serie te com a 
-            minim un episodi disponible. Per exemple: 
-            <span concordion:set="#serie">"Joc de trons te un episodi"</span> 
-            <span concordion:execute="#valid=isValidTest(#serie)"></span>
-            <span>episodis disponbles</span>
-
+            minim un episodi disponible. Per exemple:<p> 
+            <span concordion:set="#serie">Joc de trons te episodis disponibles:</span>
+            <span concordion:execute="#valid=isValidTest()"></span> 
+            <span concordion:assertEquals="#valid">true</span>
         </p>
 
-    </body>
+    </p>
+
+</body>
 
 </html>

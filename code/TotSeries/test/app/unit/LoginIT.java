@@ -41,7 +41,7 @@ public class LoginIT {
         boolean result = instance.validatePassword(username, password);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
