@@ -12,10 +12,11 @@ import java.util.ArrayList;
  * @author sergiplanes
  */
 public class VisualitzarEpisodi {
-    public boolean validateEpisodi(ArrayList <String> serie) {
-        String episodi1 = "Primer Capitol";
+    public boolean validateEpisodi() {
+        ArrayList <String> serie = new ArrayList();
+        String episodi1 = "Cap1";
         serie.add(episodi1);
-        return !serie.isEmpty();
+        boolean trobat = !serie.isEmpty();
+        return trobat;
     }
-
 }

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package app.unit;
+package app;
 
+import app.VisualitzarEpisodi;
 import app.VisualitzarEpisodi;
 import java.util.ArrayList;
 import org.junit.AfterClass;
@@ -35,13 +36,13 @@ public class VisualitzarEpisodiIT {
     @Test
     public void testValidateEpisodi() {
         System.out.println("validateEpisodi");
-        ArrayList<String> serie = new ArrayList();
+        ArrayList<String> serie = new  ArrayList<>();
         VisualitzarEpisodi instance = new VisualitzarEpisodi();
-        boolean expResult = false;
-        boolean result = instance.validateEpisodi(serie);
+        boolean expResult = true;
+        boolean result = instance.validateEpisodi();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
